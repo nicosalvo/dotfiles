@@ -37,21 +37,21 @@ ${color dodgerblue3}${font Open Sans:Bold:size=10}Date${hr 2}$color$font
 $color${font Open Sans:size=10}$alignr${time %a}, ${time %d %b %Y}$font$color
 
 # SYS
-${font Open Sans:Bold:size=10}${color dodgerblue3}SYSTEM${hr 2}$color${font}
+${font Open Sans:Bold:size=8}${color dodgerblue3}SYSTEM${hr 2}$color${font}
 $sysname $kernel $alignr $machine
 Uptime $alignr $uptime
 MB Temperature $alignr ${execi 30 sensors | grep temp2 | cut -c16-19}°C
 GPU Temperature $alignr ${execi 30 sensors | grep temp1 | grep -v crit| cut -c16-19}°C
 
 # CPU
-${font Open Sans:Bold:size=10}${color dodgerblue3}CPU${hr 2}
+${font Open Sans:Bold:size=8}${color dodgerblue3}CPU${hr 2}
 $color${font}Intel i5 3317U $alignr ${freq_g cpu0}GHz
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ${font}Core 0 ${color dodgerblue3}${execi 30 sensors | grep 'Core 0:' | cut -c18-19}°C${color} @ ${cpu cpu1} % $alignc ${color dodgerblue3}${cpubar cpu1}${color}
 ${font}Core 1 ${color dodgerblue3}${execi 30 sensors | grep 'Core 1:' | cut -c18-19}°C${color} @ ${cpu cpu2} % $alignc ${color dodgerblue3}${cpubar cpu2}${color}
 
 # TOP
-${font Open Sans:Bold:size=10}${color dodgerblue3}TOP${hr 2}
+${font Open Sans:Bold:size=8}${color dodgerblue3}TOP${hr 2}
 $color${font}${font Open Sans:bold:size=7.5}PROCESS $alignr CPU USAGE$font
 ${top name 1}${alignr}${top cpu 1} %
 ${top name 2}${alignr}${top cpu 2} %
@@ -60,7 +60,7 @@ ${top name 4}${alignr}${top cpu 4} %
 ${top name 5}${alignr}${top cpu 5} %
 
 # MEMORY
-${font Open Sans:Bold:size=10}${color dodgerblue3}MEMORY${hr 2}
+${font Open Sans:Bold:size=8}${color dodgerblue3}MEMORY${hr 2}
 $color${font}${font Open Sans:bold:size=8.5}RAM$font
 $mem / $memmax $alignr $memperc %
 $membar
@@ -69,7 +69,7 @@ $swap / $swapmax $alignr $swapperc
 ${swapbar};
 
 # NETWORK
-${font Open Sans:Bold:size=10}${color dodgerblue3}Network${hr 2}
+${font Open Sans:Bold:size=8}${color dodgerblue3}NETWORK${hr 2}
 $color${font Open Sans:bold:size=8.5}External IP ${font}${alignr}${execi 3600 wget -O - http://ip.tupeux.com | tail}$font
 
 ${font Open Sans:bold:size=8.5}wlp1s0 $font$alignr ${addr wlp1s0}
@@ -77,7 +77,7 @@ down $alignr ${downspeedf wlp1s0} kb/s (${totaldown wlp1s0})
 up $alignr ${upspeedf wlp1s0} kb/s (${totalup wlp1s0})
 
 # HDD
-${font Open Sans:Bold:size=10}${color dodgerblue3}Disks${hr 2}
+${font Open Sans:Bold:size=8}${color dodgerblue3}DISKS${hr 2}
 $color${font Open Sans:bold:size=8.5}/dev/sda $font$alignr ${execi 30 sudo hddtemp /dev/sda | grep '/dev/sda:' | cut -c36-37}°C
 
 ${font Open Sans:bold:size=8.5}ROOT $font$font$alignr ${fs_type /}
