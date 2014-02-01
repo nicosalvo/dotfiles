@@ -31,7 +31,7 @@ use_spacer none
 
 TEXT
 ${alignc 8}${font Open Sans:size=12}${color lightgray}arch${color dodgerblue3} linux$font$color
-${alignc}${font Open Sans:size=10}${color white}${execi 30 users | cut -c1-5}@$nodename
+${alignc}${font Open Sans:size=10}${color white}${execi 30 whoami}@$nodename
 $color${font}${font Open Sans:size=18}$alignr${time %H:%M}$font
 ${color dodgerblue3}${font Open Sans:Bold:size=10}Date${hr 2}$color$font
 $color${font Open Sans:size=10}$alignr${time %a}, ${time %d %b %Y}$font$color
@@ -80,9 +80,9 @@ up $alignr ${upspeedf wlp1s0} kb/s (${totalup wlp1s0})
 ${font Open Sans:Bold:size=8}${color dodgerblue3}DISKS${hr 2}
 $color${font Open Sans:bold:size=8.5}/dev/sda $font$alignr ${execi 30 sudo hddtemp /dev/sda | grep '/dev/sda:' | cut -c36-37}°C
 
-${font Open Sans:bold:size=8.5}ROOT $font$font$alignr ${fs_type /}
+${font Open Sans:bold:size=7}ROOT $font$font$alignr ${fs_type /}
 ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /} %
 ${fs_bar /}
-${font Open Sans:bold:size=8.5}HOME $font$alignr ${fs_type /home}
+${font Open Sans:bold:size=7}HOME $font$alignr ${fs_type /home}
 ${fs_used /home} / ${fs_size /home} $alignr ${fs_used_perc /home} %
 ${fs_bar /home}
