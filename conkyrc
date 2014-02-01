@@ -70,7 +70,8 @@ ${swapbar};
 
 # NETWORK
 ${font Open Sans:Bold:size=8}${color dodgerblue3}NETWORK${hr 2}
-$color${font Open Sans:bold:size=8.5}External IP ${font}${alignr}${execi 3600 wget -O - http://ip.tupeux.com | tail}$font
+$color${font Open Sans:bold:size=8}External IP ${font}${alignr}${execi 3600 wget -O - http://ip.tupeux.com | tail}$font
+${font Open Sans:bold:size=8}Wifi SSID ${font}${alignr}${wireless_essid wlp1s0}
 
 ${font Open Sans:bold:size=8.5}wlp1s0 $font$alignr ${addr wlp1s0}
 down $alignr ${downspeedf wlp1s0} kb/s (${totaldown wlp1s0})
