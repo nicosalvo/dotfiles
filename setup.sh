@@ -7,6 +7,7 @@ if [ -f ~/.vimrc ]; then
 	cp ~/.vimrc ~/.vimrc.bk
 fi
 if [ -d ~/.vim ]; then
+	rm -rf ~/.vim-bk
 	mv ~/.vim ~/.vim-bk
 fi
 
