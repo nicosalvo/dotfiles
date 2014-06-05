@@ -28,6 +28,13 @@ set hlsearch		" Highlight all matches
 
 
 "----------------------------------------
+" Color scheme
+"----------------------------------------
+let g:rehash256 = 1	" Molokai experimental colors
+colorscheme molokai	" Set molokai as the colorscheme
+
+
+"----------------------------------------
 " multiple windows
 "----------------------------------------
 set laststatus=2	" always show status line
