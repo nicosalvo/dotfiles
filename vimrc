@@ -18,6 +18,14 @@ set smartcase		" override 'ignorecase' when pattern has upper case chars
 
 
 "----------------------------------------
+" set default tabs and spaces
+"----------------------------------------
+set expandtab		" Insert spaces instead of tabs
+set tabstop=4		" Number of spaces for the TAB key
+set shiftwidth=4	" Number of spaces inserted for indentation
+
+
+"----------------------------------------
 " syntax, highlighting and spelling
 "----------------------------------------
 set background=dark	" Set dark background
