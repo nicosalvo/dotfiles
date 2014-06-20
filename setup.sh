@@ -29,3 +29,10 @@ cp -R vim ~/.vim
 # Copy screenrc
 cp screenrc ~/.screenrc
 
+#--------- Tmux ---------#
+
+# Check if .tmux.conf exists and create a backup
+[[ -f ~/.tmux.conf ]] && cp ~/.tmux.conf ~/.tmux.conf.bk
+
+# Copy tmux.conf
+cp tmux.conf ~/.tmux.conf
