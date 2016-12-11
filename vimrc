@@ -3,6 +3,33 @@
 "----------------------------------------
 set nocompatible    " Use vim settings
 
+"----------------------------------------
+" Vundle
+"----------------------------------------
+filetype off        " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Add all your plugins here (note older versions of Vundle used Bundle
+" instead of Plugin)
+
+Plugin 'scrooloose/nerdtree'    " NerdTree
+Plugin 'ctrlpvim/ctrlp.vim'     " CtrlP
+Plugin 'tmhedberg/SimpylFold'   " SimplyFold
+
+
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 
 "----------------------------------------
 " moving around, searching and patterns
@@ -24,6 +51,14 @@ set expandtab		" Insert spaces instead of tabs
 set tabstop=4		" Number of spaces for the TAB key
 set shiftwidth=4	" Number of spaces inserted for indentation
 
+au BufNewFile,BufRead *.py:
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
 
 "----------------------------------------
 " syntax, highlighting and spelling
@@ -39,7 +74,7 @@ set hlsearch		" Highlight all matches
 " Color scheme
 "----------------------------------------
 let g:rehash256 = 1	" Molokai experimental colors
-colorscheme molokai	" Set molokai as the colorscheme
+colorscheme solarized	" Set molokai as the colorscheme
 
 
 "----------------------------------------
@@ -86,4 +121,14 @@ map <space> /
 
 " Map Ctrl-<space> to ? (backward search)
 map <c-space> ?
+
+" Map F3 to open NerdTree
+map <F3> :NERDTreeToggle<CR>
+
+
+"----------------------------------------
+" plugins settings
+"----------------------------------------
+"
+let g:SimpylFold_docstring_preview = 1
 
