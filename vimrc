@@ -18,13 +18,13 @@ Plugin 'gmarik/Vundle.vim'
 " Add all your plugins here (note older versions of Vundle used Bundle
 " instead of Plugin)
 
-Plugin 'scrooloose/nerdtree'    " NerdTree
-Plugin 'ctrlpvim/ctrlp.vim'     " CtrlP
-Plugin 'tmhedberg/SimpylFold'   " SimplyFold
-
-
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-
+Plugin 'scrooloose/nerdtree'            " NerdTree
+Plugin 'ctrlpvim/ctrlp.vim'             " CtrlP
+Plugin 'tmhedberg/SimpylFold'           " SimplyFold
+Plugin 'davidhalter/jedi-vim'           " Jedi vim
+Plugin 'tpope/vim-fugitive'             " Fugitive (GIT)
+Plugin 'vim-airline/vim-airline'        " Airline status bar
+Plugin 'vim-airline/vim-airline-themes' " Airline themese
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -124,6 +124,8 @@ map <c-space> ?
 
 " Map F3 to open NerdTree
 map <F3> :NERDTreeToggle<CR>
+map <F4> :bprevious<CR>
+map <F5> :bnext<CR>
 
 
 "----------------------------------------
@@ -131,4 +133,6 @@ map <F3> :NERDTreeToggle<CR>
 "----------------------------------------
 "
 let g:SimpylFold_docstring_preview = 1
+let g:airline#extensions#tabline#enabled = 1
+
 
