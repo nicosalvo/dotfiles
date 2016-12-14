@@ -12,11 +12,15 @@ export EDITOR="vim"
 #
 # Aliases
 #
-alias ls='ls --color=auto'
 alias l='ls -lh'
 alias ll='ls -lah'
+alias ls='ls --color=auto'
+
 alias p='ps aux'
 alias pp='ps faxu'
+
+alias grep='grep --color=auto'
+alias dmesg='dmesg -HL'
 
 
 # Set vi mode
