@@ -18,13 +18,25 @@ Plugin 'gmarik/Vundle.vim'
 " Add all your plugins here (note older versions of Vundle used Bundle
 " instead of Plugin)
 
-Plugin 'scrooloose/nerdtree'            " NerdTree
-Plugin 'ctrlpvim/ctrlp.vim'             " CtrlP
-Plugin 'tmhedberg/SimpylFold'           " SimplyFold
-Plugin 'davidhalter/jedi-vim'           " Jedi vim
-Plugin 'tpope/vim-fugitive'             " Fugitive (GIT)
-Plugin 'vim-airline/vim-airline'        " Airline status bar
-Plugin 'vim-airline/vim-airline-themes' " Airline themese
+" Navigation
+Plugin 'scrooloose/nerdtree'
+
+" Search
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" Integration
+Plugin 'tpope/vim-fugitive'
+
+" Syntax
+Plugin 'hdima/python-syntax'
+Plugin 'tmhedberg/SimpylFold'
+
+" Completition
+Plugin 'Valloric/YouCompleteMe'
+
+" Look & feel
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -41,8 +53,8 @@ set smartcase		" override 'ignorecase' when pattern has upper case chars
 "----------------------------------------
 " displaying text
 "----------------------------------------
-"set number	" Vertical line numbers on
-
+set number	        " Vertical line numbers on
+set ruler		    " show cursor position below each window
 
 "----------------------------------------
 " set default tabs and spaces
@@ -63,40 +75,35 @@ au BufNewFile,BufRead *.py:
 "----------------------------------------
 " syntax, highlighting and spelling
 "----------------------------------------
-set background=dark	" Set dark background
-filetype plugin on	" Load filetype plugins
-filetype indent on	" Load filetype indent
-syntax enable		" Enable syntax highlighting
-set hlsearch		" Highlight all matches
+set background=dark	    " Set dark background
+filetype plugin on	    " Load filetype plugins
+filetype indent on	    " Load filetype indent
+syntax enable		    " Enable syntax highlighting
+set hlsearch		    " Highlight all matches
 
 
 "----------------------------------------
 " Color scheme
 "----------------------------------------
-let g:rehash256 = 1	" Molokai experimental colors
+let g:rehash256 = 1	    " Molokai experimental colors
 colorscheme solarized	" Set molokai as the colorscheme
 
 
 "----------------------------------------
 " multiple windows
 "----------------------------------------
-set laststatus=2	" always show status line
+set laststatus=2	    " always show status line
 
 " Status line format
 " set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Hex:[%B]\ Line:\ %l/%L\ (%p%%)
 
 let g:airline_theme = 'badwolf'
 
-"----------------------------------------
-" messages and info
-"----------------------------------------
-set ruler		" show cursor position below each window
-
 
 "----------------------------------------
 " command line editing
 "----------------------------------------
-set wildmenu		" command-line completition shows a list of matches
+set wildmenu		    " command-line completition shows a list of matches
 
 
 "----------------------------------------
@@ -131,8 +138,13 @@ map <F5> :bnext<CR>
 "----------------------------------------
 " plugins settings
 "----------------------------------------
-"
+
+" tmhedberg/SimpylFold
 let g:SimpylFold_docstring_preview = 1
+
+" vim-airline/vim-airline
 let g:airline#extensions#tabline#enabled = 1
 
+" hdima/python-syntax
+let python_highlight_all = 1
 
