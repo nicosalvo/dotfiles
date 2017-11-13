@@ -1,38 +1,25 @@
 #!/bin/bash
 
-#--------- Bash ---------#
+for file in $( ls dotfiles/ ); do
 
-# Backup bash files
-[[ -f ~/.bash_profile ]] && cp ~/.bash_profile ~/.bash_profile.bk
-[[ -f ~/.bashrc ]] && cp ~/.bashrc ~/.bashrc.bk
+    # Backup current files
+    if [[ -e ~/.${file} ]]; then
+        cp -rp ~/.${file} ~/.${file}.bk
+        rm -rf ~/.${file}
+    fi
 
-cp bash_profile ~/.bash_profile
-cp bashrc ~/.bashrc
+    # Copy files
+    cp -rp dotfiles/${file} ~/.${file}
 
-
-#--------- VIM ----------#
-
-# Check if .vimrc and .vim exitst and create a backup
-[[ -f ~/.vimrc ]] && cp ~/.vimrc ~/.vimrc.bk
-[[ -d ~/.vim ]] && rm -rf ~/.vim-bk && mv ~/.vim ~/.vim-bk
-
-# Copy vimrc and folders (if any)
-cp vimrc ~/.vimrc
-cp -R vim ~/.vim
+done
 
 
-#--------- Screen ---------#
+# Install Vundle for vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-# Check if .vimrc exitst and create a backup
-[[ -f ~/.screenrc ]] && cp ~/.screenrc ~/.screenrc.bk
+# Install vim plugins
+vim -e +PluginInstall +qall
 
-# Copy screenrc
-cp screenrc ~/.screenrc
+# Install YouCompleteMe
+cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer
 
-#--------- Tmux ---------#
-
-# Check if .tmux.conf exists and create a backup
-[[ -f ~/.tmux.conf ]] && cp ~/.tmux.conf ~/.tmux.conf.bk
-
-# Copy tmux.conf
-cp tmux.conf ~/.tmux.conf
