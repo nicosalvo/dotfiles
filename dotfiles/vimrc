@@ -20,6 +20,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Navigation
 Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/BufOnly.vim'
 
 " Search
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -35,6 +36,7 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'Valloric/YouCompleteMe'
 
 " Look & feel
+Plugin 'dracula/vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -134,6 +136,9 @@ map <F3> :NERDTreeToggle<CR>
 map <F4> :bprevious<CR>
 map <F5> :bnext<CR>
 
+" Map ,q to :Bonly to close all buffers except
+" for the current one
+map <Leader>q :Bonly<CR>
 
 "----------------------------------------
 " plugins settings
