@@ -48,9 +48,9 @@ filetype plugin indent on    " required
 "----------------------------------------
 " moving around, searching and patterns
 "----------------------------------------
-set ignorecase		" ignore case when using a search pattern
-set smartcase		" override 'ignorecase' when pattern has upper case chars
-
+set ignorecase                  " ignore case when using a search pattern
+set smartcase                   " override 'ignorecase' when pattern has upper case chars
+set backspace=indent,eol,start  " set backspace options
 
 "----------------------------------------
 " displaying text
