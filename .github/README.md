@@ -45,7 +45,6 @@
   * [BufOnly][bufonly] - Close all buffers but the current one
   * [NERDTree][nerdtree] - File system explorer
   * [Python Syntax][python-syntax] - Enhanced version of the original Python syntax highlighting script
-  * [SimpylFold][simpylfold] - Fold for python
   * [YouCompleteMe][youcompleteme] - Code completition
   * [Airline][airline] - Status bar for vim
   * [Airline themes][airline-themes] (default: badwolf)
@@ -54,7 +53,8 @@
 
   * [Dracula][dracula]
   * [Molokai][molokai]
-  * [Solarized][solarized] (Default)
+  * [Solarized][solarized]
+  * [Nord][nord] (Default)
 
 
 ## <a name="zsh"></a>Zsh
@@ -69,6 +69,7 @@
 [nerdtree]:         https://github.com/scrooloose/nerdtree
 [python-syntax]:    https://github.com/hdima/python-syntax
 [solarized]:        https://github.com/altercation/vim-colors-solarized
+[nord]:             https://github.com/arcticicestudio/nord-vim
 [simpylfold]:       https://github.com/tmhedberg/SimpylFold
 [youcompleteme]:    https://github.com/Valloric/YouCompleteMe
 [vundle]:           https://github.com/VundleVim/Vundle.vim

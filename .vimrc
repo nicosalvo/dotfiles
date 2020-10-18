@@ -30,7 +30,6 @@ Plugin 'tpope/vim-fugitive'
 
 " Syntax
 Plugin 'hdima/python-syntax'
-"Plugin 'tmhedberg/SimpylFold'
 
 " Completition
 Plugin 'Valloric/YouCompleteMe'
@@ -56,15 +55,15 @@ set backspace=indent,eol,start  " set backspace options
 "----------------------------------------
 " displaying text
 "----------------------------------------
-set number	        " Vertical line numbers on
-set ruler		    " show cursor position below each window
+set number                      " Vertical line numbers on
+set ruler                       " show cursor position below each window
 
 "----------------------------------------
 " set default tabs and spaces
 "----------------------------------------
-set expandtab		" Insert spaces instead of tabs
-set tabstop=4		" Number of spaces for the TAB key
-set shiftwidth=4	" Number of spaces inserted for indentation
+set expandtab                   " Insert spaces instead of tabs
+set tabstop=4                   " Number of spaces for the TAB key
+set shiftwidth=4                " Number of spaces inserted for indentation
 
 au BufNewFile,BufRead *.py:
     \ set tabstop=4
@@ -78,11 +77,11 @@ au BufNewFile,BufRead *.py:
 "----------------------------------------
 " syntax, highlighting and spelling
 "----------------------------------------
-set background=dark	    " Set dark background
-filetype plugin on	    " Load filetype plugins
-filetype indent on	    " Load filetype indent
-syntax enable		    " Enable syntax highlighting
-set hlsearch		    " Highlight all matches
+set background=dark             " Set dark background
+filetype plugin on              " Load filetype plugins
+filetype indent on              " Load filetype indent
+syntax enable                   " Enable syntax highlighting
+set hlsearch                    " Highlight all matches
 
 
 "----------------------------------------
@@ -94,7 +93,7 @@ colorscheme nord
 "----------------------------------------
 " multiple windows
 "----------------------------------------
-set laststatus=2	    " always show status line
+set laststatus=2	            " always show status line
 
 " Status line format
 " set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Hex:[%B]\ Line:\ %l/%L\ (%p%%)
@@ -105,7 +104,7 @@ let g:airline_theme = 'badwolf'
 "----------------------------------------
 " command line editing
 "----------------------------------------
-set wildmenu		    " command-line completition shows a list of matches
+set wildmenu		            " command-line completition shows a list of matches
 
 
 "----------------------------------------
