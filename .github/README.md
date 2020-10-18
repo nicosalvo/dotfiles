@@ -18,9 +18,10 @@
   * `C-a hjkl` Window movement
   * `C-a |` Split window vertical
   * `C-a -` Split window horizontal
-
   * Set default colors to `"screen-256color"`
   * Enable vi keys
+  * tpm (install with prefix+I)
+  * Nord theme
 
 
 ## <a name="vim"></a>Vim
