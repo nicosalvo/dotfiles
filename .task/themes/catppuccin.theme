@@ -1,0 +1,47 @@
+# Catppuccin Macchiato (Taskwarrior Native rgb### 3-digit format)
+
+# General UI Colors
+color.header=rgb235
+color.label=rgb335
+color.title=rgb435
+color.footnote=rgb223
+color.summary.bar=on rgb112
+color.summary.background=rgb001
+color.history.add=on rgb352 rgb001
+color.history.done=on rgb245 rgb001
+color.history.delete=on rgb533 rgb001
+
+# Task State Attributes
+color.keyword=rgb244
+color.tag=rgb544
+color.project=rgb245
+color.count=rgb445
+
+# Task Urgency and Status Rules
+color.active=black on rgb543
+color.scheduled=rgb245
+color.until=rgb001
+color.blocked=rgb112
+color.blocking=rgb532
+
+# Due Date Alerts
+color.due=rgb533
+color.due.today=bold rgb533
+color.overdue=bold rgb522
+
+# Priority Overrides
+color.uda.priority.H=bold rgb544
+color.uda.priority.M=rgb532
+color.uda.priority.L=rgb244
+
+# Calendar Colors
+color.calendar.today=black on rgb544
+color.calendar.due=on rgb533 black
+color.calendar.due.today=bold on rgb533 black
+color.calendar.overdue=bold on rgb522 black
+color.calendar.weekend=rgb112
+color.calendar.holiday=on rgb543 black
+color.calendar.weeknumber=rgb335
+
+# Grid Line Adjustments
+color.grid=rgb112
